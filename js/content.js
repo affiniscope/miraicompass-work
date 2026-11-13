@@ -10,7 +10,7 @@ window.WORK_LP = {
     // LINE登録（UTAGE登録URL）
     line: 'https://utage-system.com/line/open/lBYMtXAVpFov',
     // 申込ページ（決済URL）。空欄の間は「申し込む」ボタンを表示せず、LINEボタンのみ表示
-    apply: ''
+    apply: 'https://univa.cc/3XpKii'
   },
 
   /* ---- 今までのお客様の声 ----
