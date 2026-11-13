@@ -26,7 +26,7 @@
 .work-lp .price-card-price{ color: var(--c-accent); }
 .work-lp .tag{ background: var(--c-pink); color: var(--c-accent); }
 
-/* ---- ヘッダーのLINEボタン ---- */
+/* ---- ヘッダーのボタン（未使用） ---- */
 .work-lp .header-inner .btn-small{ padding: 8px 14px; font-size: .78rem; }
 
 /* ---- CTAボタン群 ---- */
@@ -129,7 +129,7 @@
   margin:0;
 }
 
-/* ---- スマホ固定LINEボタン ---- */
+/* ---- スマホ固定申込ボタン ---- */
 .sticky-cta{
   position: fixed; left:0; right:0; bottom:0; z-index: 90;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));

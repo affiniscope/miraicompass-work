@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sticky = document.getElementById('sticky-cta');
   const hero = document.getElementById('top');
   const finalCta = document.querySelector('.section-cta');
-  if (sticky && hero && links.line && 'IntersectionObserver' in window) {
+  if (sticky && hero && links.apply && 'IntersectionObserver' in window) {
     const seen = new Map();
     const update = () => {
       const show = ![...seen.values()].some(Boolean);
