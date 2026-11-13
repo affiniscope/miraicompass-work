@@ -1,0 +1,161 @@
+/* ==========================================================
+   MIRAI COMPASS 仕事・お金LP 専用（style.cssは恋愛LPのコピー。ここで上書き）
+   白 × ゴールド（ピンクを使わない）
+========================================================== */
+.work-lp{
+  --c-pink:       #F1E6D2;
+  --c-pink-deep:  #D4B47E;
+  --c-accent:     #9C7A45;
+  --c-ivory:      #FFFDF9;
+}
+
+/* ---- ピンク系の差し色をゴールドへ ---- */
+.work-lp .hero-bg{
+  background:
+    radial-gradient(circle at 15% 10%, rgba(239,223,195,.55), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(239,223,195,.6), transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(232,214,180,.35), transparent 60%),
+    var(--c-bg);
+}
+.work-lp .hero-title{ font-size: clamp(1.55rem, 6.4vw, 2.5rem); }
+.work-lp .hero-title-accent{ color: var(--c-accent); }
+.work-lp .section-title .accent,
+.work-lp .empathy-body strong,
+.work-lp .concept-body strong,
+.work-lp .compare-table td strong{ color: var(--c-accent); }
+.work-lp .price-card-price{ color: var(--c-accent); }
+.work-lp .tag{ background: var(--c-pink); color: var(--c-accent); }
+
+/* ---- ヘッダーのLINEボタン ---- */
+.work-lp .header-inner .btn-small{ padding: 8px 14px; font-size: .78rem; }
+
+/* ---- CTAボタン群 ---- */
+.cta-buttons{
+  display:flex; flex-direction:column; align-items:center; gap:14px;
+  margin-top: 26px; width:100%;
+}
+.cta-buttons-inline{ margin-top: 32px; }
+.cta-buttons .btn[hidden]{ display:none; }
+.work-lp .hero .btn-large{ margin-top: 0; }
+.work-lp .btn-large{ white-space: normal; text-align:center; line-height:1.5; }
+
+/* ---- サポート内容 ---- */
+.support-card{ max-width: 560px; margin: 0 auto; }
+.support-list{ margin: 0; }
+
+/* ---- 今までのお客様の声 ---- */
+.work-lp .section-voice{
+  background:
+    radial-gradient(circle at 12% 8%, rgba(239,223,195,.45), transparent 45%),
+    radial-gradient(circle at 90% 92%, rgba(239,223,195,.5), transparent 50%),
+    var(--c-ivory);
+}
+.work-voice-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+.work-voice-card{
+  position:relative;
+  background: #fff;
+  border: 1px solid var(--c-gold-soft);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px 26px;
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+.work-voice-card::before{
+  content:"";
+  position:absolute; left:0; right:0; top:0; height:3px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+}
+.work-voice-card::after{
+  content:"\201C";
+  position:absolute; right:18px; top:-6px;
+  font-family: var(--font-serif-en);
+  font-size: 5.5rem; line-height:1;
+  color: var(--c-gold-soft);
+  pointer-events:none;
+}
+.work-voice-num{
+  margin:0 0 6px;
+  font-family: var(--font-serif-en);
+  font-size:.82rem; letter-spacing:.18em;
+  color: var(--c-gold);
+}
+.work-voice-title{
+  position:relative; z-index:1;
+  font-family: var(--font-serif-jp);
+  font-size: 1.08rem; line-height:1.6;
+  color: var(--c-gold-deep);
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--c-line);
+}
+.work-voice-body p{ margin: 0 0 10px; font-size: .92rem; line-height:1.95; }
+.work-voice-body p:last-child{ margin-bottom:0; }
+.work-voice-body strong{ color: var(--c-gold-deep); }
+.work-voice-name{ margin: 14px 0 0; text-align:right; font-size:.8rem; color: var(--c-text-soft); }
+.work-lp .voice-note{ font-size:.8rem; }
+
+/* ---- プロフィール写真（工場勤務時代・実績画像） ---- */
+.profile-photos{
+  max-width: 560px;
+  margin: 24px auto 0;
+  display:grid; gap: 16px;
+}
+.profile-photo{
+  margin:0;
+  background:#fff;
+  border:1px solid var(--c-gold-soft);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: var(--shadow-soft);
+}
+.profile-photo img{ width:100%; height:auto; border-radius: calc(var(--radius) - 6px); }
+.profile-photo figcaption{ margin-top:8px; font-size:.8rem; color: var(--c-text-soft); text-align:center; }
+
+/* ---- 原稿差し込み位置（?preview=1 のときだけ表示） ---- */
+.draft-slot{ display:none; }
+.is-preview .draft-slot{ display:block; }
+.draft-box{
+  border: 2px dashed var(--c-gold);
+  border-radius: var(--radius);
+  padding: 28px 18px;
+  text-align:center;
+  color: var(--c-gold-deep);
+  font-weight:700;
+  margin:0;
+}
+
+/* ---- スマホ固定LINEボタン ---- */
+.sticky-cta{
+  position: fixed; left:0; right:0; bottom:0; z-index: 90;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255,251,246,.94);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--c-line);
+  display:flex; justify-content:center;
+  transform: translateY(110%);
+  transition: transform .3s ease;
+}
+.sticky-cta.is-shown{ transform: none; }
+.sticky-cta .btn{ width:100%; max-width: 420px; padding: 14px 20px; font-size: .95rem; }
+.work-lp .site-footer{ padding-bottom: 96px; }
+
+@media (min-width: 640px){
+  .work-voice-grid{ grid-template-columns: 1fr 1fr; }
+  .profile-photos{ grid-template-columns: 1fr 1fr; }
+  .work-voice-card{ padding: 34px 28px 30px; }
+}
+@media (min-width: 900px){
+  .work-lp .voice-grid{ grid-template-columns: repeat(2,1fr); }
+  .sticky-cta{ display:none; }
+  .work-lp .site-footer{ padding-bottom: 48px; }
+  .cta-buttons{ flex-direction: row; justify-content:center; }
+  .cta-buttons .btn-large{ max-width: 380px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .sticky-cta{ transition:none; }
+}
